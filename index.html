@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="center">
+    <div class="parent center">
+      <!-- Login Container start-->
+      <form class="login__container center" method="post">
+        <div class="form_title">Login to continue</div>
+        <div class="form_input" id="form">
+          <span id="countrycode">+91</span>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="Your mobile number"
+          />
+        </div>
+        <div class="submit_Login center">
+          <input type="submit" value="Continue" id="Continue_login_button" />
+        </div>
+        <div class="term_and_condition center">
+          <small
+            >By continuing you agree to our
+            <span class="highlight">Terms of Use</span> and acknowledge that you
+            have read our <span class="highlight">Privacy Policy</span>.</small
+          >
+        </div>
+      </form>
+      <!-- Login Container end-->
+
+      <!-- OTP Container start-->
+      <form class="otp__container center" autocomplete="off" method="post">
+        <div class="form_title">
+          <span class="backArrow">&leftarrow;</span> Validate OTP (One Time
+          Passcode)
+        </div>
+        <div class="otpNumbers" id="form">
+          <input
+            type="number"
+            name="phone"
+            class="otpNum center"
+            maxlength="1"
+            autocomplete="off"
+          />
+          <input
+            type="number"
+            name="phone"
+            class="otpNum center"
+            maxlength="1"
+            autocomplete="off"
+          />
+          <input
+            type="number"
+            name="phone"
+            class="otpNum center"
+            maxlength="1"
+            autocomplete="off"
+          />
+          <input
+            type="number"
+            name="phone"
+            class="otpNum center"
+            maxlength="1"
+            autocomplete="off"
+          />
+          <input
+            type="number"
+            name="phone"
+            class="otpNum center"
+            maxlength="1"
+            autocomplete="off"
+          />
+        </div>
+        <div class="submit_Login center">
+          <input
+            type="submit"
+            value="Verify OTP"
+            id="Continue_otp_button"
+            onclick="(e)=>{e.preventDefault()}"
+          />
+        </div>
+        <div class="term_and_condition center">
+          <small
+            >A OTP has been sent to
+            <span class="highlight" id="userPhone"></span>. Please enter the OTP
+            in the above field to verify your phone.</small
+          >
+        </div>
+      </form>
+      <!-- OTP Container end-->
+    </div>
+
+    <!-- Adding firebase script for generating OTP -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+
+    <!-- Additionl firebase product that we might use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
